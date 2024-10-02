@@ -1,4 +1,4 @@
-# 🌻 Cozy Farming Week 🌾#
+# 🌻 Cozy Farming Week 🌾
  
 Welcome to **Cozy Farming Week**, a relaxing and fun challenge week organized at HR!
  
