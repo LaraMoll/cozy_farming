@@ -1,0 +1,162 @@
+import time
+
+# Cozy Farm - Simple Text-Based Game with Timer
+
+# Initialize player stats
+player_hp = 100
+
+def start_game():
+    global player_hp
+    # Record the start time
+    start_time = time.time()
+    
+    print("Welcome to Cozy Farm!")
+    farm_name = input("You are the proud owner of a new farm! What would you like to name your farm?\n")
+    print(f"Wow, {farm_name} is a fantastic name for your farm!")
+    
+    print("\nYour first task is to get some tools. Why don't you visit Annie the blacksmith? She lives by the west lake.")
+    print("Type 'm' to open your map.")
+    
+    while True:
+        map_choice = input("Where do you want to go? Type 'w' to walk west.\n")
+        if map_choice.lower() == 'w':
+            visit_blacksmith(start_time)
+            break
+        else:
+            print("Try again, you need to head west!")
+
+def visit_blacksmith(start_time):
+    global player_hp
+    print("\n--- You have arrived at the blacksmith ---")
+    farmer_name = input("Annie: Well, look who it is! The new farmer! What's your name?\n")
+    print(f"Annie: Nice to meet you, {farmer_name}! I have some old rusty tools for you, but I need a favor first.")
+    
+    while True:
+        task_choice = input("Can you pick 5 apples for me? Type 'yes' or 'no'.\n").lower()
+        if task_choice == 'no':
+            print("Annie: Ah, what a shame, no tools for you then, haha!")
+            break
+        elif task_choice == 'yes':
+            print("Annie: Great! You can find apples in the fruit tree forest, go pick some for me.")
+            apple_quest(start_time)
+            break
+        else:
+            print("Please type 'yes' or 'no'.")
+
+def apple_quest(start_time):
+    global player_hp
+    print("\n--- On your way to the fruit tree forest, you encounter a riddle ---")
+    
+    # First Riddle
+    while True:
+        riddle_answer = input("Riddle: 'I am tall when I am young, and short when I am old. What am I?'\n").lower()
+        if riddle_answer == "candle":
+            print("Correct! You may proceed.")
+            player_hp += 30  # Increase HP for solving the riddle
+            break
+        else:
+            print("Unfortunately, that is not the right answer. Try again.")
+
+    print("\n--- You have picked 5 apples and are heading back to Annie ---")
+    
+    # Second Riddle (Math Riddle)
+    print("\n--- On your way back, you encounter another riddle ---")
+    while True:
+        math_riddle_answer = input("Riddle: 'If a farmer has 24 apples and wants to divide them equally into baskets, "
+                                    "with each basket holding 6 apples, how many baskets will he need?'\n")
+        if math_riddle_answer.isdigit() and int(math_riddle_answer) == 4:
+            print("Correct! You've done well!")
+            player_hp += 30  # Increase HP for solving the second riddle
+            break
+        else:
+            print("That's not quite right. Give it another shot!")
+
+    return_to_blacksmith(start_time)
+
+def return_to_blacksmith(start_time):
+    global player_hp
+    print("\nYou are back at Annie's.")
+    print("Annie: Thanks for the apples! Here are your tools. Good luck with your farm!")
+    
+    # Calculate playtime
+    elapsed_time = time.time() - start_time
+    elapsed_minutes = int(elapsed_time // 60)
+    elapsed_seconds = int(elapsed_time % 60)
+    
+    print(f"\n--- Congratulations! You have completed the first quest and received your tools ---")
+    print(f"You played for {elapsed_minutes} minutes and {elapsed_seconds} seconds.")
+    print(f"Current HP: {player_hp}")
+    print("Now head back to your farm to start planting crops. Good luck on your new adventure!")
+    
+    # Start the farming mini-game
+    farming_game()
+
+def farming_game():
+    global player_hp
+    print("\n--- Welcome to your farm! It's time to plant some crops. ---")
+    crops_planted = 0
+
+    while True:
+        print("\nYou have the following crops to choose from:")
+        print("1. Wheat")
+        print("2. Carrot")
+        print("3. Corn")
+        print("4. Exit planting mode")
+        
+        crop_choice = input("What would you like to plant? (Type the number)\n")
+        
+        if crop_choice == '1':
+            crops_planted += 1
+            print("You planted some Wheat!")
+        elif crop_choice == '2':
+            crops_planted += 1
+            print("You planted some Carrots!")
+        elif crop_choice == '3':
+            crops_planted += 1
+            print("You planted some Corn!")
+        elif crop_choice == '4':
+            print(f"\nYou have planted a total of {crops_planted} crops. Great job!")
+            break
+        else:
+            print("Please select a valid option.")
+
+        # Ask if they want to continue planting
+        if crop_choice in ['1', '2', '3']:
+            more_crops = input("Would you like to plant more crops? (yes/no)\n").lower()
+            if more_crops != 'yes':
+                print("Exiting planting mode.")
+                break
+
+    print("Your farm is looking good! Keep planting and growing your crops to make your farm successful.")
+
+    # Start the mini text-based game
+    mini_text_game()
+
+def mini_text_game():
+    global player_hp
+    print("\n--- Mini Text-Based Game: Guess the Number! ---")
+    secret_number = 7  # Example number
+    attempts = 0
+
+    while True:
+        guess = input("Guess the secret number between 1 and 10: ")
+        
+        if guess.isdigit():
+            guess = int(guess)
+            attempts += 1
+            if guess < secret_number:
+                print("Too low! Try again.")
+            elif guess > secret_number:
+                print("Too high! Try again.")
+            else:
+                print("Congratulations! You've guessed the number!")
+                player_hp += 20  # Gain HP for completing the mini-game
+                break
+        else:
+            print("Please enter a valid number.")
+
+    print(f"Your current HP: {player_hp}")
+
+# Start the game immediately
+start_game()
+
