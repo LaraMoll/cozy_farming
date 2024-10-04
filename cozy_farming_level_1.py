@@ -30,7 +30,7 @@ def start_game():
     print("Welcome to Cozy Farm!")
     farm_name = input("You are the proud owner of a new farm! What would you like to name your farm?\n")
     print(f"Wow, {farm_name} is a fantastic name for your farm!")
-    farmers_name.append(farm_name)
+
     
     print("\nYour first task is to get some tools. Why don't you visit Annie the blacksmith? She lives by the west lake.")
     # print("Type 'm' to open your map.")
@@ -49,6 +49,7 @@ def visit_blacksmith(start_time):
     print("\n--- You have arrived at the blacksmith ---")
     farmer_name = input("Annie: Well, look who it is! The new farmer! What's your name?\n")
     print(f"Annie: Nice to meet you, {farmer_name}! I have some old rusty tools for you, but I need a favor first.")
+    farmers_name.append(farmer_name)
     
     while True:
         task_choice = input("Can you pick 5 apples for me? Type 'yes' or 'no'.\n").lower()
@@ -273,8 +274,8 @@ def fishing_game():
                 print("Oh you dont have any tries left. the correct answer was 'C'")
                 print(f"\nMiddle aged man: Out of pity i'll just give you one. That was so sad to hear. ")
                 break
-        print("\n--- The middle aged man gave you fishing equipment.  ---")
-        print("Middle aged man: By the way, I'm mark. See you around ---")
+    print("\n--- The middle aged man gave you fishing equipment.  ---")
+    print("Middle aged man: By the way, I'm mark. See you around ")
 
     print("\n--- You walk out of the shop with your fishing equiptment. And you go to a place where you can fish. ---")
 
@@ -314,7 +315,7 @@ def fishing_game():
     print("    |")
     print("    |    🐟")
     print("    |🐟")
-    print("\n--- You did it! you cought your first fish ---")
+    print("\n--- You did it! you caught your first fish ---")
     print("\n--- After hours of fishing you finally decide to go back to the farm. ---")
 
 

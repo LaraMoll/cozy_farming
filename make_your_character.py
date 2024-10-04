@@ -167,7 +167,7 @@ def choose_accessories():
         for index, value in enumerate(accessories_list):
             print(f"{index}: {value}")
         
-        accesorries_question = input("Please select an accesorries color by entering a number (0-6): ")
+        accesorries_question = input("Please select an accesorries by entering a number (0-6): ")
 
         if not accessories_is_valid(accesorries_question):
             print("Not in the list, choose again :(! ")
