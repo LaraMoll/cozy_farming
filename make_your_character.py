@@ -6,43 +6,48 @@ skin_tones_list = ["Pale skin","Fair skin","Medium skin","Olive skin","Naturally
 hair_color_list = ["Blond","Brown","Black","Ginger"]
 
 # Eye color:
-eye_color_list = ["Blue","Green","Blown","Black","Grey"]
+eye_color_list = ["Blue","Green","Brown","Black","Grey"]
 
 # Body type:
 body_type_list = ["Muscular","Curvy","Skinny"]
 
 # Accessoiries: 
-accessories_list = ["Straw hat","Glasses","Ribbon","Ferdora hat","Necklace","Bracelet","Earrings"]
+accessories_list = ["Straw hat","Glasses","Ribbon","Fedora hat","Necklace","Bracelet","Earrings"]
 
 # Empty list for the farmers choice
 farmer_choice = []
 
 # Function voor als de skin tone valid is
 def skin_tone_valid(skin_tone):
+    # met dit wordt gechecked of het nummer van skin_tone is in a valid range zoja dan returned het true zoniet returned het false
     if skin_tone.isdigit() and 0 <= int(skin_tone) < len(skin_tones_list):
         return True
     return False
 
 # Function voor als de hair color valid is
 def hair_color_valid(hair_color):
+    # met dit wordt gechecked of het nummer van skin_tone is in a valid range zoja dan returned het true zoniet returned het false
     if hair_color.isdigit() and 0 <= int(hair_color) < len(hair_color_list):
         return True
     return False
 
 # Function voor als de eye color valid is
 def eye_color_valid(eye_color):
+    # met dit wordt gechecked of het nummer van skin_tone is in a valid range zoja dan returned het true zoniet returned het false
     if eye_color.isdigit() and 0 <= int(eye_color) < len(eye_color_list):
         return True
     return False
 
 # Function voor als de body type valid is
 def body_type_valid(body_type):
+    # met dit wordt gechecked of het nummer van skin_tone is in a valid range zoja dan returned het true zoniet returned het false
     if body_type.isdigit() and 0 <= int(body_type) < len(body_type_list):
         return True
     return False
 
 # Function voor als de type accessories valid is
 def accessories_is_valid(accessories):
+    # met dit wordt gechecked of het nummer van skin_tone is in a valid range zoja dan returned het true zoniet returned het false
     if accessories.isdigit() and 0 <= int(accessories) < len(accessories_list):
         return True
     return False
@@ -50,6 +55,7 @@ def accessories_is_valid(accessories):
 # Function voor de skin tones
 def choose_skin_tone():
     while True:
+        # enumerate gives you the position of the item in the list starting from 0 and the value are the things in the list.
         for index, value in enumerate(skin_tones_list):
             print(f"{index}: {value}")
         
@@ -76,6 +82,7 @@ def choose_skin_tone():
 # Function voor de hair color
 def choose_hair_color():
     while True:
+        # enumerate gives you the position of the item in the list starting from 0 and the value are the things in the list.
         for index, value in enumerate(hair_color_list):
             print(f"{index}: {value}")
         
@@ -102,6 +109,7 @@ def choose_hair_color():
 # Function voor de eye color
 def choose_eye_color():
     while True:
+        # enumerate gives you the position of the item in the list starting from 0 and the value are the things in the list.
         for index, value in enumerate(eye_color_list):
             print(f"{index}: {value}")
         
@@ -128,6 +136,7 @@ def choose_eye_color():
 # Function voor de body types
 def choose_body_type():
     while True:
+        # enumerate gives you the position of the item in the list starting from 0 and the value are the things in the list.
         for index, value in enumerate(body_type_list):
             print(f"{index}: {value}")
         
@@ -154,6 +163,7 @@ def choose_body_type():
 # Function voor de accessories
 def choose_accessories():
     while True:
+        # enumerate gives you the position of the item in the list starting from 0 and the value are the things in the list.
         for index, value in enumerate(accessories_list):
             print(f"{index}: {value}")
         

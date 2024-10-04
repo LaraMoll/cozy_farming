@@ -194,6 +194,7 @@ def mini_text_game():
 
     fishing_game_text()
 
+# function for the fishing game text 
 def fishing_game_text():
     global player_hp
     global farmers_name
@@ -201,6 +202,7 @@ def fishing_game_text():
     print("\n---  Now that you have watered and planted your crops.  ---")
     print("--- Let's try out fishing ---")
 
+    # A wrong count if a user says the wrong for more than 3 times they get forced go to to that place. 
     while wrong_count > 0:
         map_choice = input("Where do you want to go?\n1. West lake\n2. Beach \n").lower()
         
@@ -226,6 +228,7 @@ def fishing_game_text():
                 fishing_game()
                 break 
 
+# Fishing game function
 def fishing_game():
     global player_hp
     global farmers_name
@@ -233,12 +236,14 @@ def fishing_game():
     print("\n--- You arrived at the beach and see a fish shop ---")
     # fish_shop = input("--- do you want to go to the shop, yes or no  ---").lower()
     
+    # While loop to visit the fish shop.
     while True:
         fish_shop = input("do you want to go to the shop, yes or no\n").lower()
-        
+        # If player types in yes then the farmer goes to the fishshop
         if fish_shop == "yes":
             print("\n--- You walk towards the shop ---")
             break
+        # If the player types in no, the player still goes to the fishshop < im not forcing or anything. but i am
         elif fish_shop == "no":
             print("\n--- Not gonna lie, you don't really have a choice. ---")
             break
@@ -272,7 +277,7 @@ def fishing_game():
         print("Middle aged man: By the way, I'm mark. See you around ---")
 
     print("\n--- You walk out of the shop with your fishing equiptment. And you go to a place where you can fish. ---")
-    # print("\n----")
+
     while True:
         message_bottle = input("You stumble upon a message in a bottle in the sea. Do you pick it up. yes or no?  ").lower()
         
@@ -301,7 +306,7 @@ def fishing_game():
             print("\n---You continue walking and go to your designated spot. ---")
             break
 
-    # print("\n--- You start fishing ---")
+    
     print("\n--- You start fishing ---")
     print("  🦯")
     print("    |")
@@ -312,6 +317,8 @@ def fishing_game():
     print("\n--- You did it! you cought your first fish ---")
     print("\n--- After hours of fishing you finally decide to go back to the farm. ---")
 
+
+    # Farmers needs to go back to his farm because it's late
     wrong_count = 3
     while wrong_count > 0:
         map_choice = input("Where do you want to go?\n1. West lake\n2. Beach \n3. Farm \n").lower()     
@@ -346,6 +353,7 @@ def fishing_game():
                 farmland()
                 break 
 
+# End of level 1. every player passes level 1.
 def farmland():
     global player_hp
     global farmers_name
@@ -353,6 +361,7 @@ def farmland():
     print("\n---It's finally time to rest now. ---")
 
     while True:
+        # It's late and the farmer needs energy for the next level. if the user types in no they lose hp, too exhausted if they type in yes they get hp because they're well rested.
         rest_now = input("Will you go to bed yes or no?. (No might give you some negative impact so choose wisely. ) ").lower()
         if rest_now == "no":
             player_hp - 50
@@ -369,7 +378,6 @@ def farmland():
 def main():
 # Start the game immediately
     start_game()
-    # fishing_game()
 
 main()
 
