@@ -1,3 +1,4 @@
+# import demo_level1
 # Skin tone list 
 skin_tones_list = ["Pale skin","Fair skin","Medium skin","Olive skin","Naturally brown skin","Very dark"]
 
@@ -176,20 +177,20 @@ def choose_accessories():
             #     return choose_accessories()
             
 
-# Choose a name 
-def choose_name():
-    while True:
-        name_question = input("Hey Farmer! what is your name? ").lower()
+# # Choose a name 
+# def choose_name():
+#     while True:
+#         name_question = input("Hey Farmer! what is your name? ").lower()
 
-        continue_name = input(f"Oh! {name_question} is such a nice name! do you want to continue? Yes or No: ").lower()
-        name = name_question
-        if continue_name == "No":
-            print("Oh choose again.")
-            return choose_name()
-        if continue_name == "Yes":
-            print("Girly that name slayed ")
-            farmer_choice.append(name)
-        break
+#         continue_name = input(f"Oh! {name_question} is such a nice name! do you want to continue? Yes or No: ").lower()
+#         name = name_question
+#         if continue_name == "No":
+#             print("Oh choose again.")
+#             return choose_name()
+#         if continue_name == "Yes":
+#             print("Girly that name slayed ")
+#             farmer_choice.append(name)
+#         break
 
 # Hier roep ik de funtions aan
 def main():
@@ -203,8 +204,8 @@ def main():
     print("")
     choose_accessories()
     print("")
-    choose_name()
-    print(farmer_choice)
+    # choose_name()
+    # # print(farmer_choice)
 
 
 main()
