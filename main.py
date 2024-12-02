@@ -1,20 +1,6 @@
 import time
-import make_your_character
-# Cozy Farm - Simple Text-Based Game with Timer
+from make_your_character import *
 riddle_tries = 3
-# Choose a name  function 
-# def choose_name():
-#     while True:
-#         name_question = input("Hey Farmer! what is your name? ").lower()
-
-#         continue_name = input(f"Oh! {name_question} is such a nice name! do you want to continue? Yes or No: ").lower()
-#         if continue_name == "no":
-#             print("Oh choose again.")
-#             return choose_name()
-#         if continue_name == "yes":
-#             print("Girly that name slayed ")
-#             # start_game()
-#             break
 
 
 # Initialize player stats
@@ -376,9 +362,9 @@ def farmland():
             break
                 
 
-def main():
-# Start the game immediately
+if __name__ == "__main__":
+    call_functions()
     start_game()
 
-main()
+
 

@@ -1,4 +1,3 @@
-# import demo_level1
 # Skin tone list 
 skin_tones_list = ["Pale skin","Fair skin","Medium skin","Olive skin","Naturally brown skin","Very dark"]
 
@@ -69,15 +68,6 @@ def choose_skin_tone():
             # skin_tone_lockin = input("Are you sure that you want this skin color. yes or no : ").lower()
             farmer_choice.append(skin_tone)
             break
-            # if skin_tone_lockin == "yes":
-            #     print(f"Okay! you chose: {skin_tone}")
-            #     farmer_choice.append(skin_tone)
-            #     break
-            # if skin_tone_lockin == "no":
-            #     print("")
-            #     print(f"Oh okay then, choose again.")
-            #     return choose_skin_tone()
-
 
 # Function voor de hair color
 def choose_hair_color():
@@ -96,15 +86,6 @@ def choose_hair_color():
             # hair_color_lockin = input("Are you sure that you want this hair color. yes or no : ").lower()
             farmer_choice.append(hair_color)
             break
-            # if hair_color_lockin == "yes":
-            #     print(f"Okay! you chose: {hair_color}")
-            #     farmer_choice.append(hair_color)
-            #     break
-            # if hair_color_lockin == "no":
-            #     print("")
-            #     print(f"Oh okay then, choose again.")
-            #     return choose_hair_color()
-            
 
 # Function voor de eye color
 def choose_eye_color():
@@ -123,15 +104,6 @@ def choose_eye_color():
             # eye_color_lockin = input("Are you sure that you want this eye color. yes or no : ").lower()
             farmer_choice.append(eye_color)
             break
-            # if eye_color_lockin == "yes":
-            #     print(f"Okay! you chose: {eye_color}")
-            #     farmer_choice.append(eye_color)
-            #     break
-            # if eye_color_lockin == "no":
-            #     print("")
-            #     print(f"Oh okay then, choose again.")
-            #     return choose_eye_color()
-
 
 # Function voor de body types
 def choose_body_type():
@@ -150,15 +122,7 @@ def choose_body_type():
             # body_type_lockin = input("Are you sure that you want this body type. yes or no : ").lower()
             farmer_choice.append(body_type)
             break
-            # if body_type_lockin == "yes":
-            #     print(f"Okay! you chose: {body_type}")
-            #     farmer_choice.append(body_type)
-            #     break
-            # if body_type_lockin == "no":
-            #     print("")
-            #     print(f"Oh okay then, choose again.")
-            #     return choose_body_type()
-            
+
 
 # Function voor de accessories
 def choose_accessories():
@@ -176,46 +140,13 @@ def choose_accessories():
             print(f"You chose: {accessories}")
             farmer_choice.append(accessories)
             break
-            # accessories_lockin = input("Are you sure that you want this accesorries. yes or no : ").lower()
-            # if accessories_lockin == "yes":
-            #     print(f"Okay! you chose: {accessories}")
-            #     farmer_choice.append(accessories)
-            #     break
-            # if accessories_lockin == "no":
-            #     print("")
-            #     print(f"Oh okay then, choose again.")
-            #     return choose_accessories()
-            
 
-# # Choose a name 
-# def choose_name():
-#     while True:
-#         name_question = input("Hey Farmer! what is your name? ").lower()
-
-#         continue_name = input(f"Oh! {name_question} is such a nice name! do you want to continue? Yes or No: ").lower()
-#         name = name_question
-#         if continue_name == "No":
-#             print("Oh choose again.")
-#             return choose_name()
-#         if continue_name == "Yes":
-#             print("Girly that name slayed ")
-#             farmer_choice.append(name)
-#         break
-
-# Hier roep ik de funtions aan
-def main():
+def call_functions():
     choose_skin_tone()
-    print("")
     choose_hair_color()
-    print("")
     choose_eye_color()
-    print("")
     choose_body_type()
-    print("")
     choose_accessories()
-    print("")
-    # choose_name()
-    # # print(farmer_choice)
-
-
-main()
+    print("\nThese are your choices:")
+    for farmer in farmer_choice:
+        print(farmer)
