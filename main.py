@@ -1,5 +1,6 @@
 import time
-from make_your_character import *
+from cozy_farming_level2 import *
+# from make_your_character import *
 riddle_tries = 3
 
 
@@ -40,8 +41,8 @@ def visit_blacksmith(start_time):
     while True:
         task_choice = input("Can you pick 5 apples for me? Type 'yes' or 'no'.\n").lower()
         if task_choice == 'no':
-            print("Annie: Ah, what a shame, no tools for you then, haha!")
-            break
+            print("Annie: Im not giving you a choice.")
+
         elif task_choice == 'yes':
             print("Annie: Great! You can find apples in the fruit tree forest, go pick some for me.")
             apple_quest(start_time)
@@ -157,7 +158,7 @@ def mini_text_game():
     global player_hp
     global farmers_name
     print("\n--- Mini Text-Based Game: Guess the Number! ---")
-    secret_number = 7  # Example number
+    secret_number = 3  # Example number
     attempts = 0
 
     while riddle_tries > 0:
@@ -261,9 +262,9 @@ def fishing_game():
                 print(f"\nMiddle aged man: Out of pity i'll just give you one. That was so sad to hear. ")
                 break
     print("\n--- The middle aged man gave you fishing equipment.  ---")
-    print("Middle aged man: By the way, I'm mark. See you around ")
+    print("Middle aged man: By the way. I'm mark, See you around ")
 
-    print("\n--- You walk out of the shop with your fishing equiptment. And you go to a place where you can fish. ---")
+    print("\n--- You walk out of the shop with your fishing equipment. And you go to a place where you can fish. ---")
 
     while True:
         message_bottle = input("You stumble upon a message in a bottle in the sea. Do you pick it up. yes or no?  ").lower()
@@ -284,7 +285,6 @@ def fishing_game():
                     riddle_tries -= 1
                     if riddle_tries > 0:
                         print(f"Unfortunately, that is not the right answer. you have {riddle_tries} tries left.")
-                        
                     else: 
                         print("Oh you dont have any tries left. the correct answer was 'Fish hook'")
                         break
@@ -360,11 +360,15 @@ def farmland():
             print("\n--- Good choice you feel refreshed the next day. +30 hp ---")
             print(f"--- you have {player_hp} hp. ---")
             break
+        else:
+            print("That's not valid yes or no")
                 
 
 if __name__ == "__main__":
-    call_functions()
+    # call_functions()
     start_game()
+    fall_story_beginning()
+
 
 
 

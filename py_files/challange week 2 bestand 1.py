@@ -20,10 +20,6 @@ if setting == 'jungle':
 if response == 'yes':
     print("Great , the riddle goes:  I am easy to lift, but hard to throw. What am I?")
 
-
-
-
-
 elif response == 'wait':
         print("You wait another 10 minutes and he still isn't here")
 else:
@@ -37,7 +33,6 @@ if setting == 'desert':
 if response == 'follow':
         print("You follow him into the dunes")
         transport = input('You see a canoe nearby... walk or take the canoe down the river?')
-
 
         if transport == 'walk':
             response = input("You walk into the desert and a scorpion stops you for a riddle.. do you want to solve the riddle?:")
@@ -54,13 +49,12 @@ if response == 'follow':
             quit()
 
             if response == 'canoe':
-    else:
-        print('invalid response... you lose!') 
-
-    elif response == 'wait':
-        print("You wait another 10 minutes and he still isn't here")
-    else:
-        print('Invalid response... You lose!')
-
-    else: 
-        print('Invalid response... You lose!')
+                print("test")
+    # else:
+    #     print('invalid response... you lose!') 
+    # elif response == 'wait':
+    #     print("You wait another 10 minutes and he still isn't here")
+    # else:
+    #     print('Invalid response... You lose!')
+    # else: 
+    #     print('Invalid response... You lose!')

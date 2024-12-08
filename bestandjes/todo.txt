@@ -1,0 +1,4 @@
+TODO:
+
+een class for de crops om bij te houden hoeveel er zijn.
+eventueel voor level 2.
